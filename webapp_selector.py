@@ -8,6 +8,9 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 
+nltk.download('wordnet')
+nltk.download('punkt')
+
 # with open("style.css") as f:
 #     st.markdown("""<script>{f.read()}</script>""", unsafe_allow_html=True)
 
