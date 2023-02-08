@@ -10,7 +10,7 @@ from sumy.summarizers.lex_rank import LexRankSummarizer
 
 nltk.download('wordnet')
 nltk.download('punkt')
-headers = {"Authorization": f"Bearer {st.secrets["API_KEY"]}",
+headers = {"Authorization": f"Bearer {st.secrets['API_KEY']}",
 	"content-type": "application/json"}
     
 #==============================================================================================================
