@@ -19,8 +19,7 @@ st.set_page_config(page_title="Arxiv Summary Generator",
                    page_icon=":newspaper:",
                    layout="wide")
 st.title("Arxiv Summary Generator")
-st.markdown("Please paste an [Arxiv]( https://arxiv.org ) paper link below and select type of AI/Python model for writing summary or [Contact us](info@chatgptai.me)
-")
+st.markdown("Please paste an [Arxiv]( https://arxiv.org ) paper link below and select type of AI/Python model for writing summary or [Contact us](info@chatgptai.me)")
 # CSS
 #==============================================================================================================
 def summarize_sum(text, ratio=0.5):
