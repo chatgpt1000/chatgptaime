@@ -10,11 +10,8 @@ from sumy.summarizers.lex_rank import LexRankSummarizer
 
 nltk.download('wordnet')
 nltk.download('punkt')
-headers = {
-	"authorization": st.secrets["API_KEY"],
-	"content-type": "application/json"
-	}
-
+headers = {"Authorization": f"Bearer {API_KEY}"}
+    
 #==============================================================================================================
 # Streamlit UI
 st.set_page_config(page_title="Arxiv Summary Generator", 
@@ -66,7 +63,6 @@ reverse=True)
 summary_sentences])
     return summary
 
-#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
 # Function to fetch the abstract of the arxiv paper
 def get_arxiv_info(url):
     #https://arxiv.org/abs/2301.00029/
@@ -83,7 +79,6 @@ def openai(abstract, model="text-curie-001",
                 top_p=0.9,
                 num_return_sequences=1, TRANSLATE = ""):
     #API_KEY = 
-    headers = {"Authorization": f"Bearer {API_KEY}"}
     prompt =  f"Summarize following text: {abstract}"
     request_body =  {"model": "text-curie-001", 
                     "prompt": prompt,
