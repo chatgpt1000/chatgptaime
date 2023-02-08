@@ -28,7 +28,7 @@ def summarize_sum(text, ratio=0.5):
     return " ".join([str(sentence) for sentence in summary])
 
 def summarize_nltk(text, ratio=0.5):
-    stop_words = set(stopwords.words("english"))
+    stop_words = set([word.strip() for word in open("english_stopwords.txt","r",encoding="utf-8").read().split("\n")])
     words = word_tokenize(text)
     words = [word.lower() for word in words if word.isalpha() and word.lower()
 not in stop_words]
