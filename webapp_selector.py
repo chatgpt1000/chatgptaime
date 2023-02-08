@@ -78,7 +78,7 @@ def openai(abstract, model="text-curie-001",
                 top_k=0,
                 top_p=0.9,
                 num_return_sequences=1, TRANSLATE = ""):
-    API_KEY = "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"
+    #API_KEY = 
     headers = {"Authorization": f"Bearer {API_KEY}"}
     prompt =  f"Summarize following text: {abstract}"
     request_body =  {"model": "text-curie-001", 
